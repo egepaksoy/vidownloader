@@ -63,8 +63,3 @@ def video_info(link):
             resolution = resos["360p"]
 
     return yt, resolution
-
-
-video_link = input("Video linkini giriniz: ")
-
-video_download(video_info(video_link))
