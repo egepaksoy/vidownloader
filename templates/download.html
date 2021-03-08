@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block title %} {{video.title}} Videosu indiriliyor
+{% endblock title %} {% block body %}
+
+<video src="{{video.link}}"></video>
+<a class="btn btn-outline-success" href="/indiriliyor/360">Videoyu indir</a>
+<a class="btn btn-outline-success" href="/indiriliyor/480">Videoyu indir</a>
+<a class="btn btn-outline-success" href="/indiriliyor/720">Videoyu indir</a>
+
+{% endblock body %}
