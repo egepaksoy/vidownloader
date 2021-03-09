@@ -1,15 +1,20 @@
 {% extends 'base.html' %} {% block title %} Vidownload {% endblock title %} {%
 block content %}
-<form action="video/">
-  <div class="mb-3">
+<form
+  method="POST"
+  style="margin: 200px auto 0 auto; width: 60%"
+  action="/video"
+>
+  <div class="input-group mb-3">
     <input
       type="text"
-      placeholder="Youtube videosunun url'ini girin"
       class="form-control"
-      id="searchbox"
-      aria-describedby="emailHelp"
+      name="videourl"
+      placeholder="Video url'i girin"
+      aria-label="Video url'i girin"
+      aria-describedby="button-addon2"
     />
+    <button class="btn btn-success" type="submit" id="search">Ara</button>
   </div>
-  <button type="submit" class="btn btn-primary">Ara</button>
 </form>
 {% endblock content %}

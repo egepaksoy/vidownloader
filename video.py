@@ -34,32 +34,39 @@ from pytube import YouTube
 #! for v in videos: print(v.resolution) video kalitesini veriyor
 
 
-def video_download(yt):
-    yt[0].streams[yt[1]].download("/home/ege/Downloads")
+def video_download(video_id, reso):
+    yt = YouTube(video_id)
+    yt.streams[reso].download("/home/ege/Downloads/vidownload")
 
 
 def video_info(link):
     try:
         yt = YouTube(link)
     except VideoUnavailable:
-        print('Video bulunamadı\n'+VideoUnavailable)
+        print('Video bulunamadı')
     else:
+        # resos = []
         resos = {}
         x = 0
         for stream in yt.streams.filter(progressive=True):
             print(stream.resolution)
             resos[stream.resolution] = x
+            # resos.append(stream.resolution)
             x += 1
-        reso = input('Kalite seçin: ')
-        reso = str(reso)
 
-        if "1080" in reso:
-            resolution = resos["1080p"]
-        if "720" in reso:
-            resolution = resos["720p"]
-        if "480" in reso:
-            resolution = resos["480p"]
-        if "360" in reso:
-            resolution = resos["360p"]
+        # reso = input('Kalite seçin: ')
+        # reso = str(reso)
 
-    return yt, resolution
+        # if "1080" in reso:
+        #     resolution = resos["1080p"]
+        # if "720" in reso:
+        #     resolution = resos["720p"]
+        # if "480" in reso:
+        #     resolution = resos["480p"]
+        # if "360" in reso:
+        #     resolution = resos["360p"]
+    # yt.thumbnail_url
+    # yt.embed_url
+    # yt.video_id
+
+    return yt, resos

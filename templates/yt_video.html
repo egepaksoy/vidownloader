@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block title %} Video {% endblock title %} {% block
+content %} {% if yt %}
+<div class="card" style="width: 18rem">
+  <img
+    src="{{yt[0].thumbnail_url}}"
+    class="card-img-top"
+    alt="{{yt[0].title}}"
+  />"
+  <div class="card-body">
+    <p class="card-title">{{yt[0].title}}</p>
+    <p class="card-text"></p>
+  </div>
+</div>
+<div class="dropdown">
+  <button
+    class="btn btn-secondary dropdown-toggle"
+    type="button"
+    id="dropdownMenuButton1"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    Kalite seçenekleri
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    {% for reso in yt[1] %}
+    <li>
+      <a
+        class="dropdown-item"
+        href="download/{{yt[0].video_id}}/{{yt[1][reso]}}"
+        >{{reso}}</a
+      >
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% else %}
+<p class="text">Url'i baştan girmeniz lazım</p>
+{% endif %} {% endblock content %}
