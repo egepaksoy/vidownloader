@@ -26,8 +26,7 @@ def video():
 def download(url, sira):
     url = "https://youtube.com/watch?v="+url
     video_download(url, sira)
-    path = "/home/ege/Downloads/vidownload/"+video_info(url)[0].title+"mp4"
-    return send_file(path, as_attachment=True)
+    return redirect("/")
 
 
 if __name__ == "__main__":
