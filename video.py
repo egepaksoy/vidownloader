@@ -36,7 +36,7 @@ from pytube import YouTube
 
 def video_download(video_id, reso):
     yt = YouTube(video_id)
-    yt.streams[reso].download("/home/ege/Downloads/vidownload")
+    yt.streams[reso].download("videos/")
 
 
 def video_info(link):
