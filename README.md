@@ -24,4 +24,4 @@ Now by running this command, you simply start the flask server and you can just 
     python web.py
     
 # Watching downloaded videos
-This app automaticly save videos into videos file. So you can go there an watch your video.
+This app automaticly save **videos** into videos file. So you can go there an watch your video.
