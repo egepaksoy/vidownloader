@@ -1,7 +1,7 @@
 # Installation
 First run this command in your terminal, bash or whatever.
 
-    git clone https://github.com/egepaksoy/vidownloader.git ~/Documents/
+    git clone https://github.com/egepaksoy/vidownloader.git ~/Documents/vidownloader
     
 ### If you haven't git already
 You can run this command in linux
